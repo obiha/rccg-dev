@@ -63,7 +63,7 @@ export default function App() {
         <Tab.Screen name="Give" component={GiveScreen} />
         <Tab.Screen name="Gallery" component={GalleryScreen} />
       </Tab.Navigator>
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
     </NavigationContainer>
   );
 }

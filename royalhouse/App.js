@@ -33,9 +33,9 @@ const Tab = createBottomTabNavigator();
 export default function App() {
 
   return (
-    <NavigationContainer>
+    <NavigationContainer >
       <Tab.Navigator
-
+    
         initialRouteName={homeName}
         screenOptions={(({ route }) => ({
           tabBarIcon: ({ focused, size, colour }) => {
@@ -55,6 +55,8 @@ export default function App() {
             return <Ionic name={iconName} size={size} colour={colour} />
           },
           headerShown:false // set to remove titles from each screens
+          ,
+          tabBarStyle: {height: 90,}
         }))}
       >
         <Tab.Screen name="Sermons" component={SermonsScreen} />

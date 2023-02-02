@@ -6,24 +6,49 @@ import { LinearGradient } from 'expo-linear-gradient';
 import introImg from '../data/testimg/intro.jpg'
 
 const styles = StyleSheet.create({
-  heading: {
-    fontSize: 18,
-    fontWeight: '600',
-    marginBottom: 13,
+  headerImage: {
+    width: '100%', height: 460
   },
-  card: {
-    backgroundColor: 'white',
-    borderRadius: 8,
-    paddingVertical: 45,
-    paddingHorizontal: 25,
-    width: '100%',
-    marginVertical: 10,
+  headerText: {
+    color: 'white',
+    fontSize: 25,
+    lineHeight: 130,
+    textAlign: 'center',
+    backgroundColor: '#2a3753c0',
+    height: 460,
+
   },
-  shadowProp: {
+  topcard: {
+    borderRadius: '5%',
+    marginLeft:"2%", 
+    marginTop:'6%',
+    marginBottom:'2%',
+    width: '96%', 
+    height: 170, 
+    backgroundColor: '#f0f0f0', 
     shadowColor: '#171717',
-    // shadowOffset: {width: -2, height: 4},
+    shadowOffset: {width: -2, height: 4},
     shadowOpacity: 0.2,
     shadowRadius: 3,
+
+  },
+  card: {
+    borderRadius: '5%',
+    marginLeft:"2%", 
+    marginTop:'2%',
+    marginBottom:'2%',
+    width: '96%', 
+    height: 170, 
+    backgroundColor: '#f0f0f0', 
+    shadowColor: '#171717',
+    shadowOffset: {width: -2, height: 4},
+    shadowOpacity: 0.2,
+    shadowRadius: 3,
+
+  },
+  shadowProp: {
+   
+
   },
 });
 
@@ -33,26 +58,59 @@ export default function HomeScreen() {
 
     <ScrollView style={{ flex: 3, backgroundColor: '#FFFFFF' }}>
 
-      <View style={{ width: '100%', height: 500, backgroundColor: '#000000' }}>
+      <View style={{ width: '100%', height: 450, backgroundColor: '#FFFFFF' }}>
+        <ImageBackground source={introImg} style={styles.headerImage}>
+
+          <Text style={styles.headerText}> RoyalHouse</Text>
+
+        </ImageBackground>
 
       </View>
 
-      <View style={{ width: '100%', height: 500, backgroundColor: '#0101F0' }}>
+      {/* <LinearGradient
+        // Button Linear Gradient
+        colors={['#2a3753', '#ffffff']}
+      >
+        <Text style={styles.text}></Text>
+      </LinearGradient> */}
+
+
+      <View style={styles.topcard}>
 
       </View>
-      <View style={{ width: '100%', height: 200, backgroundColor: '#000000' }}>
 
-      </View>
-      <View style={{ width: '100%', height: 200, backgroundColor: '#00C0A0' }}>
-
-      </View>
-      <View style={{ width: '100%', height: 200, backgroundColor: '#000000' }}>
+      <View style={styles.card}>
 
       </View>
 
-      <View style={{ width: '100%', height: 200, backgroundColor: '#00C0A0' }}>
+      <View style={styles.card}>
 
       </View>
+
+      <View style={styles.card}>
+
+      </View>
+
+
+      {/* 
+
+<View style={{ width: '100%', height: 200, backgroundColor: '#000000' }}>
+
+</View>
+<View style={{ width: '100%', height: 200, backgroundColor: '#00C0A0' }}>
+
+</View>
+<View style={{ width: '100%', height: 200, backgroundColor: '#000000' }}>
+
+</View>
+
+<View style={{ width: '100%', height: 200, backgroundColor: '#00C0A0' }}>
+
+</View> */}
+
+
+
+
 
     </ScrollView>
 

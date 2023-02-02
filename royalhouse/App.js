@@ -37,7 +37,7 @@ export default function App() {
       <Tab.Navigator
     
         initialRouteName={homeName}
-        screenOptions={(({ route }) => ({
+        screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, size, colour }) => {
             let iconName;
 
@@ -53,11 +53,17 @@ export default function App() {
               iconName = focused ? "ios-images" : "ios-images-outline"
             }
             return <Ionic name={iconName} size={size} colour={colour} />
-          },
+          },          
           headerShown:false // set to remove titles from each screens
           ,
-          tabBarStyle: {height: 90,}
-        }))}
+          tabBarStyle: {height: 95},
+          tabBarActiveTintColor:'#FFFFFF',
+          tabBarInactiveTintColor:'#FFFFFF',
+          tabBarShowLabel:'False',
+          
+                    
+        })}
+        
       >
         <Tab.Screen name="Sermons" component={SermonsScreen} />
         <Tab.Screen name="Events" component={EventsScreen} />

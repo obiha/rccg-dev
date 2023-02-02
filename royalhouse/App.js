@@ -30,6 +30,12 @@ const galleryName = "Gallery";
 
 const Tab = createBottomTabNavigator();
 
+const styles = StyleSheet.create({
+  container: {
+    
+  },
+});
+
 export default function App() {
 
   return (
@@ -40,9 +46,9 @@ export default function App() {
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, size, colour }) => {
             let iconName;
-
             if (route.name === "Sermons") {
               iconName = focused ? "book" : "book-outline"
+              
             } else if (route.name === "Events") {
               iconName = focused ? "ios-today" : "ios-today-outline"
             } else if (route.name === "Home") {
@@ -52,16 +58,16 @@ export default function App() {
             } else if (route.name === "Gallery") {
               iconName = focused ? "ios-images" : "ios-images-outline"
             }
-            return <Ionic name={iconName} size={size} colour={colour} />
+            return <Ionic name={iconName} size={size} color={"#FFFFFF"} />
           },          
-          headerShown:false // set to remove titles from each screens
-          ,
-          tabBarStyle: {height: 95},
-          tabBarActiveTintColor:'#FFFFFF',
-          tabBarInactiveTintColor:'#FFFFFF',
+          headerShown:false, // set to remove titles from each screens
+          tabBarActiveTintColor:'#000000',
+          tabBarInactiveTintColor:'#000000',
           tabBarShowLabel:'False',
+          tabBarStyle: {borderTopWidth: 0,height: 95, backgroundColor: '#000000'}
+        
           
-                    
+          
         })}
         
       >
@@ -76,13 +82,6 @@ export default function App() {
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: offBackgroundColor,
-    alignItems: 'center',
-    // justifyContent: 'center',
-  },
-});
+
 
 

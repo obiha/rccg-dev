@@ -9,6 +9,10 @@ import SafeAreaView from 'react-native-safe-area-view';
 import { Audio } from 'expo-av';
 import * as React from 'react';
 
+
+//Set font to be used
+// https://fonts.google.com/specimen/Stint+Ultra+Expanded?category=Display&preview.text=RoyalHouse&preview.text_type=custom
+
 //Screens 
 import HomeScreen from './screens/HomeScreen';
 import SermonsScreen from './screens/SermonsScreen';
@@ -32,7 +36,7 @@ const Tab = createBottomTabNavigator();
 
 const styles = StyleSheet.create({
   container: {
-    
+
   },
 });
 
@@ -41,14 +45,14 @@ export default function App() {
   return (
     <NavigationContainer >
       <Tab.Navigator
-    
+
         initialRouteName={homeName}
         screenOptions={({ route }) => ({
           tabBarIcon: ({ focused, size, colour }) => {
             let iconName;
             if (route.name === "Sermons") {
               iconName = focused ? "book" : "book-outline"
-              
+
             } else if (route.name === "Events") {
               iconName = focused ? "ios-today" : "ios-today-outline"
             } else if (route.name === "Home") {
@@ -59,18 +63,20 @@ export default function App() {
               iconName = focused ? "ios-images" : "ios-images-outline"
             }
             return <Ionic name={iconName} size={size} color={"#FFFFFF"} />
-          },          
-          headerShown:false, // set to remove titles from each screens
-          tabBarActiveTintColor:'#000000',
-          tabBarInactiveTintColor:'#000000',
-          tabBarShowLabel:'False',
-          tabBarStyle: {borderTopWidth: 0,height: 95, backgroundColor: '#000000'}
-        
-          
-          
-        })}
-        
-      >
+          },
+          headerTintColor: '#FFFFFF',
+          headerShown: route.name == "Home" ? false : true, // set to remove titles from each screens
+          headerStyle: {
+            backgroundColor: '#000000',
+            elevation: 0,
+            shadowOpacity: 0,
+            borderBottomWidth: 0,
+          },
+          tabBarActiveTintColor: '#FFFFFF',
+          tabBarInactiveTintColor: '#FFFFFF',
+          tabBarShowLabel: 'False',
+          tabBarStyle: { borderTopWidth: 0, height: 95, backgroundColor: '#000000D4', elevation:0, position:'absolute'}})}>
+            
         <Tab.Screen name="Sermons" component={SermonsScreen} />
         <Tab.Screen name="Events" component={EventsScreen} />
         <Tab.Screen name="Home" component={HomeScreen} />

@@ -19,15 +19,15 @@ const height = width * 100 / 110;
 
 const styles = StyleSheet.create({
   headerImage: {
-    width, height: 470
+    width, height: 480
   },
   headerText: {
     color: 'white',
     fontSize: 25,
     lineHeight: 140,
     textAlign: 'center',
-    backgroundColor: '#0a0a0a1F',
-    height: 470,
+    backgroundColor: '#2E3B565C',
+    height: 480,
 
   },
   topcard: {
@@ -67,16 +67,16 @@ const styles = StyleSheet.create({
 export default function HomeScreen() {
   return (
     <ScrollView style={{ flex: 3, backgroundColor: '#000000', borderTopLeftRadius: '20%', borderTopRightRadius: '20%' }}>
-      <View style={{ width: '100%', height: 470, backgroundColor: '#000000', borderTopLeftRadius: '20%', borderTopRightRadius: '20%' }} >
+      <View style={{ width: '100%', height: 480, backgroundColor: '#000000', borderTopLeftRadius: '20%', borderTopRightRadius: '20%' }} >
         <ScrollView horizontal={true} pagingEnabled style={{ width, height }}>
           {images.map((image, index) => (
             <ImageBackground
               key={index}
               source={{ uri: image }}
-              style={styles.headerImage} imageStyle={{ borderTopLeftRadius: '20%', borderTopRightRadius: '20%' }}
+              style={styles.headerImage} imageStyle={{ borderTopLeftRadius: '0%', borderTopRightRadius: '0%' }}
             >
 
-<Text style={styles.headerText}> RoyalHouse</Text>
+              <Text style={styles.headerText}> RoyalHouse</Text>
             </ImageBackground>
           ))}
 
@@ -128,11 +128,11 @@ export default function HomeScreen() {
       </View>
 
       <View style={styles.card}>
-        <ImageBackground source={newImg} style={{ height: '100%', width: '100%' }} imageStyle={{ borderRadius: '10%' }}>
-          <TouchableOpacity style={{ height: '100%', width: '100%', borderRadius: '10%', backgroundColor: '#00000033' }} onPress={() => { console.log('You tapped the button!') }}>
+        
+          <TouchableOpacity style={{ height: '100%', width: '100%', borderRadius: '10%', backgroundColor: '#FFFFFF' }} onPress={() => { console.log('You tapped the button!') }}>
           <Text>Destiny Group</Text>
           </TouchableOpacity>
-        </ImageBackground>
+        
 
       </View>
 

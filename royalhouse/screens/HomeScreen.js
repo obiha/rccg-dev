@@ -3,8 +3,8 @@ import { useState } from 'react';
 import { ScrollView, Text, View, StyleSheet, SafeAreaView, Button, TouchableOpacity, Dimensions } from 'react-native';
 import { Image, ImageBackground } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
-import introImg from '../data/testimg/intro.jpg'
-import introImgTwo from '../data/testimg/intro2.jpg'
+// import introImg from '../data/testimg/intro.jpg'
+// import introImgTwo from '../data/testimg/intro2.jpg'
 import newImg from '../data/testimg/new.jpg'
 
 const images = [
